@@ -1,0 +1,16 @@
+/* ViewAllButton Component Styles */
+.viewAllButton {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.allText {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.viewAllButton:hover .allText {
+    color: var(--accent);
+}

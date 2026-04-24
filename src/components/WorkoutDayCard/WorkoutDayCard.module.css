@@ -1,0 +1,26 @@
+/* WorkoutDayCard Component Styles */
+.workoutCard {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0 16px 12px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.workoutCard:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
+}
+
+.workoutTitle {
+    color: var(--text-h);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.workoutDay {
+    color: var(--text-muted);
+    font-size: 14px;
+}

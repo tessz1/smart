@@ -1,0 +1,23 @@
+/* NextWorkout Component Styles */
+.sectionNextDay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.eventNext {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-h);
+}
+
+.workoutsContainer {
+    width: 100%;
+}
+
+.workoutList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

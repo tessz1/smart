@@ -1,0 +1,88 @@
+.container {
+    padding: 20px;
+    color: #fff;
+}
+
+
+.name_exercise {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.sets_counter {
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.value {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stripe {
+    height: 1px;
+    margin-left: 32px;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.15),
+            transparent);
+}
+
+.advice_block {
+    margin-top: 40px;
+    padding: 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,
+            rgba(124, 58, 237, 0.15),
+            rgba(76, 29, 149, 0.1));
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.advice_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.advice_text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}

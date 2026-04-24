@@ -1,0 +1,104 @@
+.mainContainer {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    padding: 12px 10px;
+
+    /* стекло */
+    background: rgba(20, 20, 28, 0.55);
+    backdrop-filter: blur(14px);
+
+    /* только верх скруглён */
+    border-radius: 24px 24px 0 0;
+
+    /* лёгкая внутренняя глубина */
+    box-shadow:
+        0 -8px 20px rgba(124, 58, 237, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    color: #fff;
+}
+
+/* 🔥 Градиентная “обводка сверху” */
+.mainContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 24px 24px 0 0;
+    padding: 1px;
+
+    background: linear-gradient(to bottom,
+            rgba(167, 139, 250, 0.6),
+            /* яркий фиолетовый */
+            rgba(124, 58, 237, 0.25),
+            transparent);
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Контейнер иконок */
+.icons {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* 🔥 Плавающий индикатор */
+.indicator {
+    position: absolute;
+    bottom: 4px;
+
+    height: 4px;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg,
+            #a78bfa,
+            #7c3aed);
+
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.6);
+
+    transition: all 0.3s ease;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+    padding: 6px 10px;
+
+    cursor: pointer;
+    opacity: 0.6;
+
+    transition: all 0.25s ease;
+}
+
+.item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.active {
+    opacity: 1;
+    color: #c4b5fd;
+
+    transform: translateY(-4px) scale(1.05);
+}
+
+.item span {
+    font-size: 12px;
+}
+
+.active svg {
+    filter: drop-shadow(0 0 6px rgba(167, 139, 250, 0.7));
+}
