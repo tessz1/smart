@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px 12px;
+}
+
+
+.back_button,
+.name_item {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.img_photo {
+    width: 390px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.circleButton {
+    width: 48px;
+    height: 48px;
+    border-radius: 30%;
+    border: none;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.circleButton:active {
+    transform: scale(0.9);
+}
+
+.timerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+
+
+.description_button {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.contrainer_description {
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow_left {
+    width: 48px;
+    height: 48px;
+    border-radius: 30%;
+    border: none;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}

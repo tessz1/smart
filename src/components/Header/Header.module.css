@@ -1,0 +1,33 @@
+/* Header Component Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px 12px;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.6);
+}
+
+.logoText {
+    color: var(--text-h);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.headerRight .icon {
+    font-size: 18px;
+    color: var(--text-h);
+    opacity: 0.9;
+}

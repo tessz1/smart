@@ -1,0 +1,15 @@
+/* .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.holdTime {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    transform: "translate(-50%, -50%)";
+    color: "white";
+    font-size: "12px";
+    /* fontWeight: "bold"; */
+}
