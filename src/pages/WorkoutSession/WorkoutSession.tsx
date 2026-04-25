@@ -5,6 +5,7 @@ import mainImage from '../../assets/main.jpg';
 import { useState } from 'react';
 import AboutTraning from "../WorkoutSession/AboutTraning/AboutTraning";
 import CircleTimer from "../WorkoutSession/CircleTimer/CircleTimer";
+import WorkoutFinished from './WorkoutFinished/WorkoutFinished';
 
 interface Props {
     data: WorkoutDay[];
@@ -16,16 +17,19 @@ export default function WorkoutSession({ data }: Props) {
     const [duration, setDuration] = useState(59);
     const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0)
     const isRunning = mode === 'rest';
-
     const currentWorkout = data[0];
     const currentExercise = currentWorkout.exercises[currentExerciseIndex]
+    const isWorkoutFinished =
+        currentExerciseIndex >= currentWorkout.exercises.length
+    if (isWorkoutFinished) {
+        return <WorkoutFinished />
+    }
     const totalSets = currentExercise.sets
     const resetButtonForTest = () => {
         setCurrentExerciseIndex(0)
         setCurrentSet(1)
         setMode("ready")
     };
-
     const statusMode = () => {
         if (mode === 'ready') {
             if (currentSet === totalSets) {
@@ -42,7 +46,6 @@ export default function WorkoutSession({ data }: Props) {
     const onComplete = () => {
         setMode('ready');
     };
-
     return (
         <div className={styles.main_container}>
             <div className={styles.header}>
@@ -60,7 +63,6 @@ export default function WorkoutSession({ data }: Props) {
                 alt="Main"
                 className={styles.img_photo}
             />
-
             <AboutTraning
                 data={currentExercise}
                 currentSet={currentSet}
@@ -95,11 +97,10 @@ export default function WorkoutSession({ data }: Props) {
                     </button>
 
                     <div className={styles.description_button}>
-                        {mode === 'ready' ? 'Готово' : 'Отдых'}
+                        {mode === 'ready' ? 'Отдых' : 'Готово'}
                     </div>
                 </div>
             </div>
-
             <button onClick={resetButtonForTest}>
                 Test Button for RESET
             </button>

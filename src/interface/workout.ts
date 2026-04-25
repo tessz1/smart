@@ -82,3 +82,14 @@ export interface WorkoutDay {
     muscles: Muscle[];
     exercises: Exercise[];
 }
+
+
+export interface WorkoutHistoryItem {
+    id: number;
+    workoutId: number;
+    workoutTitle: string;
+    date: string;
+    duration: number;
+    calories: number;
+    completedExercises: number;
+}
